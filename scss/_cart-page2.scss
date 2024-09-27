@@ -129,7 +129,7 @@
 
 
 
-/*購物清單*/
+/*購物清單*/  /*未修好*/
 
 .cartlist{
 
@@ -152,6 +152,12 @@
          border-bottom: 1px solid $maincolor;
          padding: 24px;
 
+         @include phone414(){
+            width: 120px;
+            height: 100px;
+            margin-right: 12px;
+            
+        }
 
 
       
@@ -165,13 +171,19 @@
                 margin-right: 32px;
 
                 @include pad(){
-                    width: 165px;
+                    width: 150px;
+                    height: 120px;
+                    
                     
                 }
-                @include phone414(){
+                @include phone569(){
+                    width: 120px;
+                    height: 100px;
                     margin-right: 12px;
+                   
                     
                 }
+          
 
          
             }
@@ -184,9 +196,7 @@
             }
 
             p{
-                margin:0 24px 12px 0;
-                
-                
+                margin:0 24px 12px 0; 
             }
         }
 

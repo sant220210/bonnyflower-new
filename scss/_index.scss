@@ -104,7 +104,7 @@
 }
 
 .about-img{
-    @include bgimg(570px,top,'https://plus.unsplash.com/premium_photo-1674435400233-dbf8f6139159?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    @include bgimg(570px,top,'../image/花藝-關於1.png');
     width:650px;
 
     @include tablet992(){
@@ -121,7 +121,7 @@
 }
 
 .service-img{
-    @include bgimg(654px,center,'https://images.unsplash.com/photo-1556662257-a99f482826b7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    @include bgimg(654px,center,'../image/花藝-關於2.png');
     width:538px;
 
     @include tablet992(){
@@ -280,7 +280,7 @@
 
 
 .dried-flower-img{
-    @include bgimg(603px,50%,'https://images.unsplash.com/photo-1558959703-78d19f4ffb7f?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    @include bgimg(603px,50%,'../image/花藝-乾燥花禮.png');
    
     @include tablet992(){
     height: 250px;
@@ -324,7 +324,7 @@
 }
 
 .preserved-flower-img{
-    @include bgimg(264px,0 80%,'https://images.unsplash.com/photo-1612538946167-bc98c01732be?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    @include bgimg(264px,0 80%,'../image/花藝-永生花禮.png');
     transform:scaleX(-1);
    
     @include phone414(){
@@ -336,7 +336,7 @@
 }
 
 .fresh-bouquet-img{
-    @include bgimg(300px,top,'https://images.unsplash.com/photo-1615385639736-362b69696227?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    @include bgimg(300px,top,'../image/花藝-新鮮花禮.png');
    
     @include phone414(){
         height: 145px;

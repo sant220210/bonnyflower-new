@@ -90,8 +90,12 @@
 
     }
 
-    @include phone414(){
+    @include phone569(){
         gap: 8px;
+        }
+
+    @include phone414(){
+        padding: 24px 4px;
         }
 
 
@@ -110,8 +114,13 @@
 
 
         @include pad(){
-            width: 165px;
+            width: 150px;
             height: 120px;
+        }
+
+        @include phone569(){
+            width: 120px;
+            height: 100px;
         }
     }
 
