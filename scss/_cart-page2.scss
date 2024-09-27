@@ -1,0 +1,477 @@
+.schedule-page2{ 
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    margin-bottom: 72px;
+    gap: 100px;
+
+    @include phone414(){
+        gap: 50px;
+      }
+
+    li{
+        font-weight: 700;
+   
+    }
+}
+
+.state-page2,.state2-page2{
+    @include orderstate($maincolor,$maincolor,$secondarycolor);
+}
+
+.state3-page2{
+    @include orderstate($maincolor,$secondarycolor,$maincolor);
+}
+  
+.state-page2:after {
+    @include line($maincolor);
+  
+}
+
+.state2-page2::after{
+    @include line($maincolor);
+}
+
+
+/*用戶資訊*/
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 64px;
+    border-bottom: 1px solid $maincolor;
+
+    @include pad(){
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+
+.info-item{
+    width: 650px;
+    background:rgba($color: $maincolor, $alpha: 20%);
+    height: 95%;
+
+    @include pad(){
+        margin-bottom: 64px;
+        width: 100%;
+    }
+
+  
+
+    h3{
+        padding: 16px ;
+        background: $maincolor;
+        color: $secondarycolor;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    input{
+        background: $secondarycolor;
+        padding: 12px 16px ;
+        border:0px;
+        width: 100%;
+        margin: 4px 0 16px 0;
+    }
+    select{
+ 
+        margin: 4px 0 16px 0;
+    }
+
+   
+
+}
+
+
+.info-list{
+    padding: 24px 32px;
+
+   
+
+}
+
+
+.name-page2{
+    display: flex;
+    justify-content: space-between;
+    
+    input{
+
+    width: 49%;
+}
+
+}
+
+.city{
+    background: $secondarycolor;
+    padding: 16px 12px;
+    border:0px;
+    width: 49%;
+   
+}
+
+.area{
+    display: flex;
+    justify-content: space-between;
+}
+
+.remark{
+    background: $secondarycolor;
+    padding: 16px 12px;
+    border:0px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+
+
+
+/*購物清單*/
+
+.cartlist{
+
+    h3{
+        display: block;
+        padding: 16px; 
+        background: $maincolor;
+        color: $secondarycolor;
+        text-align: center;
+        font-weight: 700;
+       
+
+    }
+
+     li{     
+         width:100%;
+         display: flex; 
+         justify-content: space-around;
+         align-items: center;
+         border-bottom: 1px solid $maincolor;
+         padding: 24px;
+
+
+
+      
+
+
+
+            img{
+                width: 203px;
+                height: 146px;
+                object-fit: cover;
+                margin-right: 32px;
+
+                @include pad(){
+                    width: 165px;
+                    
+                }
+                @include phone414(){
+                    margin-right: 12px;
+                    
+                }
+
+         
+            }
+
+
+            h5{
+                color: $wordcolor;
+                margin-bottom: 12px;
+                width: 153px;
+            }
+
+            p{
+                margin:0 24px 12px 0;
+                
+                
+            }
+        }
+
+
+    }
+
+.allprice{
+        font-weight: 600;
+        padding-left: 24px;
+
+        @include phone414(){
+            padding:72px 0 0 0 ;
+        
+        }   
+        
+      
+        }
+
+
+.total-page2{
+
+    li{
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        font-weight: 500;
+        color: $wordcolor;
+        font-size: 16px;
+
+        h6{
+            margin-right: 24px;
+        }
+
+        p{  
+            font-weight: 500;
+        }
+
+    }
+  
+}
+
+.amount-page2{
+
+    h6,p{
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+}
+
+}
+
+/*下半部/付款-*/
+
+.payment{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+
+    @include pad(){
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+
+
+}
+
+
+.pay-info{
+    width: 650px;
+    background:rgba($color: $maincolor, $alpha: 20%);
+
+    @include pad(){
+        margin-bottom: 64px;
+        width: 100%;
+    }
+
+
+   
+
+    h3{
+        padding: 16px ;
+        width: 100%;
+        background: $maincolor;
+        color: $secondarycolor;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    input{
+        background: $secondarycolor;
+        padding:12px 16px ;
+        border:0px;
+        margin: 4px 0 16px 0;
+    }
+
+    h4{
+        font-weight: 700;
+    }
+  
+}
+
+.choose-pay,.card-info,.invoice-content{
+    padding: 24px 32px;
+
+}
+
+.choose-pay{
+    
+    h4{
+        margin-bottom: 16px;
+
+    }
+
+    input{
+        margin-right: 24px;
+        
+    }
+    div{
+        padding: 16px;
+
+    }
+}
+.card-info{
+    input{
+    width: 100%;
+    }
+}
+
+.creditcard{
+    border-bottom: $maincolor 1px solid;
+}
+
+.holder-name{
+    display: flex;
+    justify-content: space-between;
+    input{
+    width: 49%;
+    }
+}
+
+.card-number{
+    position: relative;
+
+    i{
+        color: $maincolor;
+    }
+ 
+
+}
+
+.card-img{
+    position: absolute;
+    top:20px;
+    right: 20px;
+  
+}
+.date-label{
+    display: flex;
+    justify-content: space-between;
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+
+    div{
+    width: 49%;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+/*發票*/
+
+.invoice{
+    border: 1px solid $maincolor;
+    width: 538px;
+    height: 40%;
+    
+    @include pad(){
+        width: 100%;
+    }
+
+
+
+    h3{
+        padding: 16px ;
+        width: 100%;
+        background: $maincolor;
+        color: $secondarycolor;
+        text-align: center;
+        font-weight: 700;
+    }
+
+ 
+}
+
+.choose-invoice{
+    border-bottom: 1px solid $maincolor;
+    padding: 12px 0;
+    margin-bottom: 24px;
+
+    input{
+        margin-right: 24px;
+    }
+
+    h4{
+        font-weight: 700;
+    }
+
+    li{
+        font-weight: 500;
+        padding: 16px;
+
+    }
+}
+
+
+
+
+
+.idnumber{
+    width: 100%;
+    background: rgba($color: $maincolor, $alpha: 20%);
+    padding:12px 16px ;
+    border:0px;
+    margin: 16px 0 24px 0;
+
+}
+
+
+
+
+
+
+
+
+/*導航按鈕*/
+.page2-btn{
+    margin-top: 120px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+
+    a{
+        display: block;
+        padding: 24px 84px;
+        border: 1px solid $maincolor;
+        text-align: center;
+
+        @include phone569(){
+            width: 100%;
+            padding: 24px 12px;
+    
+        }
+
+
+        &:hover{
+            color: $secondarycolor;
+            background: $wordcolor;
+            transition: 0.5s;
+        }
+        
+    }
+
+}
+
+.back{
+    color: #000;
+    font-weight: 700;
+}
+
+.next{
+    background: $maincolor;
+    color: $secondarycolor;
+}
+
+

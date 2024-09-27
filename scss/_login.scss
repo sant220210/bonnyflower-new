@@ -1,0 +1,180 @@
+.login{
+    margin-top: 120px;
+    display: flex;
+   
+
+    h2{
+        font-weight: 700;
+        font-size: 32px;
+        color: $wordcolor;
+        text-align: left;
+        margin:32px 0 64px 0;
+
+    }
+    a,input{
+        display: block;
+    }
+ 
+}
+
+
+.input-email,.input-password{
+
+    width: 650px;
+    color: $gray1;
+    background:$secondarycolor;
+    border: 0;
+    border-bottom: 1px solid $maincolor;
+    margin-bottom: 24px;
+    padding: 16px 8px;
+
+    @include pad(){
+        width: 520px;
+    }
+
+    @include phone569(){
+        width: 360px;
+    }
+
+    @include phone414(){
+        width:100%;
+    }
+
+  
+}
+
+.login-btn{
+    width: 650px;
+    padding: 24px 16px ;
+    background: $maincolor;
+    border: 1px solid $maincolor;
+    color: #FFFF;
+    cursor: pointer;
+    margin-top: 64px;
+    font-weight: 700;
+    &:hover{
+       opacity: 0.5;
+
+    }
+
+    @include pad(){
+        width: 520px;
+    }
+
+    @include phone569(){
+        width: 360px;
+    }
+    @include phone414(){
+        width:100%;
+    }
+
+
+}
+
+
+
+
+.forgetpassword{
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/*第三方登入*/
+.sso-text{
+    font-size: 14px;
+    margin:64px 0 24px 0;
+    color: $gray1;
+
+
+}
+
+
+.sso-btn{
+    display: flex;
+
+    @include phone569(){
+        flex-direction: column;
+    }
+
+}
+
+
+.line{
+    color: $linecolor;
+    font-size: 35px;  
+}
+
+.fb{
+    color: $fbcolor;
+    font-size: 35px;
+}
+
+.line-btn,.fb-btn{   
+    display: block;
+    width: 50%; 
+    padding: 16px;  
+    color: black; 
+    margin-bottom: 64px;
+
+    &:hover{
+        opacity: 0.5;
+    }
+
+    @include phone569(){
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    
+}
+
+.line-content,.fb-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+} 
+
+.line-btn{ 
+    margin-right: 32px; 
+    border: 1px solid $linecolor;  
+
+} 
+
+.fb-btn{ 
+    border: 1px solid $fbcolor;
+}
+
+
+/*登入*/
+
+.registe{
+    width: 650px;
+    padding: 24px 16px ;
+    background: $secondarycolor;
+    border: 1px solid $maincolor;
+    color: $wordcolor;
+    cursor: pointer;
+    margin-top: 32px;   
+    font-weight: 700;
+    &:hover{
+        background: $maincolor;
+        color: $secondarycolor;
+    }
+
+    
+    @include pad(){
+        width: 520px;
+    }
+
+    @include phone569(){
+        width: 360px;
+    } 
+
+    @include phone414(){
+        width:100%;
+    } 
+
+    
+}
+

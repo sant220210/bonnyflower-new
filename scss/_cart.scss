@@ -1,0 +1,245 @@
+/*進度條*/
+.schedule{ 
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    max-width: 762px;
+    gap: 100px; 
+
+    @include phone414(){
+        gap: 50px;
+      }
+
+
+ 
+    li{ 
+        font-weight: 700; 
+    
+    } 
+} 
+
+
+.state{ 
+    @include orderstate($maincolor,$maincolor,$secondarycolor); 
+
+} 
+ 
+.state2,.state3{ 
+    @include orderstate($maincolor,$secondarycolor,$maincolor); 
+    
+} 
+
+.state::after { 
+    @include line($maincolor); 
+
+} 
+
+.state2::after { 
+  @include line($gray2); 
+} 
+
+
+
+/*商品列*/ 
+.main-cart{ 
+    margin-top: 64px;
+}
+
+.main-cart .container{
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet992(){
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+
+.cart{
+
+    @include tablet992(){
+        margin-bottom: 64px;
+        
+    }
+
+    h3{
+        padding: 16px ;
+        background: $maincolor;
+        color: $secondarycolor;
+        text-align: center;
+        font-weight: 700;
+        display: block;
+
+    }
+
+    li{
+             
+        width: 100%;
+        display: flex; 
+        justify-content: space-around;
+        gap: 24px;
+        align-items: center;
+        border-bottom: 1px solid $maincolor;
+        padding: 24px 12px;
+
+    @include pad(){
+        gap: 12px;
+
+    }
+
+    @include phone414(){
+        gap: 8px;
+        }
+
+
+
+
+    a{
+        display: block;
+        font-size: 24px;
+        color: $maincolor;
+    }
+
+    img{
+        width: 203px;
+        height: 146px;
+        object-fit: cover;
+
+
+        @include pad(){
+            width: 165px;
+            height: 120px;
+        }
+    }
+
+    h5{
+        color: $wordcolor;
+        margin-bottom: 12px;
+
+    }
+
+    }
+}
+.cart-content{
+    margin-left:8px;
+    display: flex;
+    gap:24px;
+    align-items: center;
+ 
+
+    @include phone569(){
+        flex-direction: column;
+        align-items:flex-end;
+        margin-right: 12px;
+        padding-top: 32px;
+
+    }
+}
+
+
+
+
+
+.cartbox{
+    display: flex;
+    
+}
+
+.minus,.num,.add{
+    text-align: center;
+    display: block;
+    border: 1px solid $maincolor;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include phone569(){
+    width: 30px;
+    height: 30px;
+    }
+}
+
+.add,.minus{
+    color: $wordcolor;
+}
+
+.close:hover {
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+/*結帳金額*/
+
+.total{
+    width: 425px;
+
+    @include phone414(){
+        width: 100%;
+    }
+
+
+   
+    h5{
+        background:rgba($color: $maincolor, $alpha: 70%);
+        color: $secondarycolor;
+        padding: 16px 0;
+        text-align: center;
+        font-size: 18px;
+
+  
+    }
+
+    ul{
+        border-right: 1px solid $maincolor;
+        border-left: 1px solid $maincolor;
+        padding: 24px 24px;
+        
+        li{
+            color: $wordcolor;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+
+        }
+    }
+}
+
+.checkout{
+    padding: 16px 0;
+    display: block;
+    text-align: center;
+    color: $secondarycolor;
+    background: $wordcolor;
+    font-size: 24px;
+
+    &:hover{
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+}
+
+.price{
+    font-weight: 600;
+    
+}
+
+.amount{
+    font-size: 20px;
+}
+
+
+
+
+
+
+  

@@ -1,0 +1,163 @@
+*,*::before,*::after{
+    box-sizing:border-box;
+  }
+
+a{
+    text-decoration: none; 
+    color:#775F62;
+  }
+
+body{
+    font-family: "Inter",sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #EFF0E9; 
+    line-height: 140%;
+    letter-spacing: 8%;
+  
+}
+
+label{
+  cursor: pointer;
+}
+
+
+.container{
+    max-width:1320px;
+    margin: 0 auto;
+
+    @include pad(){
+      padding: 0 24px;
+    
+    }
+
+    @include phone414(){
+      padding: 0 12px;
+    
+    }
+ 
+}
+
+
+
+/*設定變數*/
+
+/*color*/
+$wordcolor:#775F62;
+$maincolor:#998184;
+$secondarycolor:#EFF0E9;
+$gray1:#6B6B6B;
+$gray2:#BCBCBC;
+$fbcolor:#3B5998;
+$linecolor:#00C300;
+
+
+
+/*命名css*/
+
+@mixin nav-word{
+  line-height: 160%;
+  letter-spacing: 10%;
+  font-weight:600;
+}
+
+
+@mixin hide-text{
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+@mixin bgimg($height,$bgpos,$url){
+  background-image: url($url);/*3*/
+  background-size:cover; 
+  height: $height;/*1*/
+  background-position:$bgpos;/*2*/
+}
+
+/*進度條樣式*/
+@mixin orderstate($bdcolor,$bgcolor,$wcolor){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid $bdcolor;/*1*/
+  background: $bgcolor;/*2*/
+  color:$wcolor;/*3*/
+  font-size: 24px;
+  margin-bottom: 8px;
+  position: relative;
+
+  @include phone414(){
+    width: 55px;
+    height: 55px;
+  
+  }
+}
+
+@mixin line($bgcolor){
+  position: absolute; 
+  content: ""; 
+  width: 115px;
+  height: 4px;
+  background: $bgcolor;/*1*/
+  top:50%;
+  left:108%; 
+
+  @include phone414(){
+    width: 60px;
+  
+  }
+}
+
+
+
+
+
+
+
+/*radio改變樣式*/
+input[type="radio"]{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  border: none;
+
+  &::before { /*未點選框*/
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border: 2px solid $gray1;
+      border-radius: 50%;
+      position: absolute;
+ 
+  
+    }
+    &:checked::after { /*點選後樣式*/
+      content: '';
+      background-color: $maincolor;
+      width: 18px;
+      height: 18px;
+      top:-0.9 ;
+      border: 4px double #fff;
+      border-radius: 50%;
+      position: absolute;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

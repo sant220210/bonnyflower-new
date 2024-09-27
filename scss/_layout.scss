@@ -1,0 +1,294 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 8px  60px;
+    background:rgba(255, 255, 255, 0.5);
+    /*高斯模糊*/
+    backdrop-filter:blur(200px);
+    -webkit-backdrop-filter:blur(200px);/*safari支援*/
+    position: fixed;
+    z-index: 999;
+    top:0;
+    
+
+    @include phone569(){
+      padding: 8px 12px;
+    }
+
+
+}
+
+.navlogo{
+
+    a{
+        width: 190px;
+        height: 36px;
+        display: block;
+        background-image: url('../image/BonnyFlower.svg');
+        @include hide-text;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    
+}
+
+.nav-list,.nav-pic-list{
+    display: flex;
+    justify-content: space-around;
+   
+
+    a{ 
+        display: block;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+
+}
+
+
+.nav-list{
+    width: 33.33333%;
+
+    a{
+        @include nav-word;
+    }
+
+
+    @include pad(){
+        
+        display: none;
+    }
+
+}
+
+
+
+.nav-pic-list{
+  
+
+    @include phone569(){
+        display: flex;
+        gap: 20px;
+      
+    }
+
+    @include phone414(){
+        gap: 16px;
+      
+  }
+
+
+
+  
+    a{
+        font-size: 32px;
+        color: $maincolor;
+        padding: 12px;
+        margin-right: 24px;
+
+        i{
+            @include phone569(){
+                font-size: 20px;
+        }
+        }
+
+
+        @include phone569(){
+            padding: 0px;
+            margin: 0;
+            
+      }
+    }
+}
+
+/*漢堡選單*/
+.bars{
+    display: none;
+
+    @include pad(){
+        display: block;
+    }
+
+}
+
+.nav-aside{
+   display: none;
+
+
+    @include pad(){
+        display: block;
+        width: 270px;
+        z-index: 999;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top:72px;
+        bottom:0;
+        height: 100%;
+        transform:translateX(-270px);
+        transition:all .5s;
+    }
+
+    @include phone569(){
+        top:50px;
+    }
+
+
+    li{
+        
+        a{
+            background:#ffff;
+            background:rgba(245,245,235,0.9);
+            color:#998184;
+            display: block;
+            padding: 16px;
+            border-bottom: 1px dashed #998184;
+            font-weight: 600;
+            font-size: 18px;
+            
+        }
+    }
+}
+
+.open .nav-aside{
+    transform:translateX(0px);
+  }
+
+  .angle-down{
+    transform:translateX(12px);
+  }
+
+  .drop{
+    display: none;
+
+    li{
+        a{
+            background:#ffff;
+        }
+    }
+  }
+
+  /*aside點選動態*/
+.nav-aside li .active{
+    background: $maincolor;
+    color:$secondarycolor;
+
+
+  }
+/*end*/
+
+
+
+.header{
+    margin-top: 72px;
+    @include bgimg(400px,50%,'../image/header1.png');
+
+
+        @include phone569(){
+    
+            @include bgimg(202px,50%,'../image/header1-414.png');
+            margin-top: 50px;
+        
+        }
+
+}
+
+.header2{
+    @include bgimg (400px,50%,'../image/header2.png');
+
+    @include pad(){
+    
+        @include bgimg(220px,50%,'../image/header2-pad.png');
+        margin-top: 50px;
+     
+       }
+
+       @include phone569(){
+    
+        @include bgimg(220px,50%,'../image/header2-phone.png');
+        margin-top: 50px;
+     
+       }
+
+
+}
+
+
+
+
+
+
+
+
+
+.footer .container{
+    margin-top: 120px;  
+    border-top: 2px solid #998184;
+    display: flex;
+    justify-content: space-around;
+    padding: 48px 0;
+
+
+
+    @include phone569(){
+        flex-direction: column;
+        align-items: center;  
+        gap: 16px;
+        
+        }
+
+
+
+    
+    h4{
+        font-size: 18px;
+        color:$wordcolor;
+        font-weight: 700;
+
+        @include phone569(){
+            text-align: center;
+         
+           }
+    }
+
+    li{
+        margin:16px 0;
+
+        @include phone569(){
+            text-align: center;
+       }
+
+    }
+
+ 
+
+}
+
+
+
+.follow{
+    display: flex;
+    justify-content: space-between;
+    
+    a{
+        font-size: 36px;
+        color:$maincolor;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+
+}
+
+.tel{
+    color:black;
+}
+
+
+

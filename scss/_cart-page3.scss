@@ -1,0 +1,125 @@
+.header3{
+
+    @include bgimg(920px,50% 70%,'https://images.unsplash.com/photo-1610790747154-f5da68184bae?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    z-index: -999;
+    padding: 72px 12px 0 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h3{
+        font-size: 32px; 
+        font-weight: 700;
+        letter-spacing: 10;
+        margin:64px 0 24px 0;
+    }
+    p{
+        font-size: 20px;
+        color:$wordcolor;
+        font-weight: 600;   
+        letter-spacing: 5;
+    }
+
+} 
+
+.page3-schedule{ 
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 64px;
+  max-width: 762px;
+  
+
+  @include phone414(){
+    gap: 50px;
+  }
+
+
+ 
+
+  li{
+      font-weight: 700;
+     
+  }
+}
+
+.page3-state,.page3-state2,.page3-state3{
+  @include orderstate($maincolor,$maincolor,$secondarycolor);
+}
+
+.page3-state::after {
+  @include line($maincolor);
+
+}
+.page3-state2::after{
+  @include line($maincolor);
+}
+
+
+/*內容*/
+.page3-btn{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 64px;
+ 
+
+
+  @include phone414(){
+    flex-direction: column;
+    margin: 24px;
+  }
+
+}
+
+.goshopping-btn{
+    padding: 16px 64px;
+    background: $maincolor;
+    color: $secondarycolor;
+    display: block;
+    width: 205px;
+    font-size: 18px;
+    border: 2px solid $maincolor;
+
+    @include phone414(){
+      width: 100%;
+        
+    }
+
+ 
+
+  
+
+    &:hover{
+      color: $secondarycolor;
+      background: $wordcolor;
+      transition: 0.5s;
+        }
+  }
+
+  .checkorder-btn{
+    padding: 16px 64px;
+    color: #000;
+    display: block;
+    width: 205px;
+    font-size: 18px;
+    border: 2px solid $maincolor;
+
+    @include phone414(){
+      width: 100%;
+    }
+
+
+ 
+
+    &:hover{
+      color: $secondarycolor;
+      background: $wordcolor;
+      transition: 0.5s;
+    }
+
+  }
+
+ 

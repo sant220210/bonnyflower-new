@@ -1,0 +1,23 @@
+@mixin tablet992{
+    @media (max-width:992px) {
+        @content;/*若裡面有寫程式碼會幫你代入*/
+    }
+}
+
+@mixin pad{
+    @media (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin phone569{
+    @media (max-width:569px) {
+        @content;
+    }
+}
+
+@mixin phone414{
+    @media (max-width:414px) {
+        @content;
+    }
+}
