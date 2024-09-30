@@ -38,6 +38,7 @@
 .info{
     display: flex;
     justify-content: space-between;
+    gap: 4px;
     padding-bottom: 64px;
     border-bottom: 1px solid $maincolor;
 
@@ -129,9 +130,10 @@
 
 
 
-/*購物清單*/  /*未修好*/
+/*購物清單*/
 
 .cartlist{
+    
 
     h3{
         display: block;
@@ -140,29 +142,36 @@
         color: $secondarycolor;
         text-align: center;
         font-weight: 700;
+
+      
        
 
     }
 
      li{     
-         width:100%;
+         width: 100%;
          display: flex; 
          justify-content: space-around;
          align-items: center;
          border-bottom: 1px solid $maincolor;
          padding: 24px;
 
-         @include phone414(){
-            width: 120px;
-            height: 100px;
-            margin-right: 12px;
+         @include tablet992(){
+            padding: 24px 12px;
+            
             
         }
 
+        @include pad(){
+            padding: 24px;
+           
+        }
 
-      
+        @include phone569(){
+            padding: 24px 12px;
+        }
 
-
+     
 
             img{
                 width: 203px;
@@ -170,21 +179,26 @@
                 object-fit: cover;
                 margin-right: 32px;
 
-                @include pad(){
-                    width: 150px;
-                    height: 120px;
+                @include tablet992(){
+                    width: 45%;
+                    height:45%;
+                    margin-right:8px;
                     
                     
                 }
+
+                @include pad(){
+                    margin-right:32px;
+                    
+                    
+                }
+
+
                 @include phone569(){
-                    width: 120px;
-                    height: 100px;
                     margin-right: 12px;
                    
-                    
+                
                 }
-          
-
          
             }
 
@@ -192,12 +206,9 @@
             h5{
                 color: $wordcolor;
                 margin-bottom: 12px;
-                width: 153px;
+                
             }
 
-            p{
-                margin:0 24px 12px 0; 
-            }
         }
 
 
@@ -205,14 +216,12 @@
 
 .allprice{
         font-weight: 600;
-        padding-left: 24px;
+        text-align: right;
 
         @include phone414(){
             padding:72px 0 0 0 ;
-        
         }   
         
-      
         }
 
 
@@ -254,6 +263,7 @@
 .payment{
     display: flex;
     justify-content: space-between;
+    gap: 4px;
     margin-top: 64px;
 
     @include pad(){

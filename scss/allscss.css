@@ -1400,6 +1400,7 @@ input[type=radio]:checked::after { /*點選後樣式*/
 .info {
   display: flex;
   justify-content: space-between;
+  gap: 4px;
   padding-bottom: 64px;
   border-bottom: 1px solid #998184;
 }
@@ -1471,7 +1472,7 @@ input[type=radio]:checked::after { /*點選後樣式*/
   margin-top: 4px;
 }
 
-/*購物清單*/ /*未修好*/
+/*購物清單*/
 .cartlist h3 {
   display: block;
   padding: 16px;
@@ -1488,11 +1489,20 @@ input[type=radio]:checked::after { /*點選後樣式*/
   border-bottom: 1px solid #998184;
   padding: 24px;
 }
-@media (max-width: 414px) {
+@media (max-width: 992px) {
   .cartlist li {
-    width: 120px;
-    height: 100px;
-    margin-right: 12px;
+    padding: 24px 12px;
+    /*若裡面有寫程式碼會幫你代入*/
+  }
+}
+@media (max-width: 768px) {
+  .cartlist li {
+    padding: 24px;
+  }
+}
+@media (max-width: 569px) {
+  .cartlist li {
+    padding: 24px 12px;
   }
 }
 .cartlist li img {
@@ -1502,31 +1512,32 @@ input[type=radio]:checked::after { /*點選後樣式*/
      object-fit: cover;
   margin-right: 32px;
 }
+@media (max-width: 992px) {
+  .cartlist li img {
+    width: 45%;
+    height: 45%;
+    margin-right: 8px;
+    /*若裡面有寫程式碼會幫你代入*/
+  }
+}
 @media (max-width: 768px) {
   .cartlist li img {
-    width: 150px;
-    height: 120px;
+    margin-right: 32px;
   }
 }
 @media (max-width: 569px) {
   .cartlist li img {
-    width: 120px;
-    height: 100px;
     margin-right: 12px;
   }
 }
 .cartlist li h5 {
   color: #775F62;
   margin-bottom: 12px;
-  width: 153px;
-}
-.cartlist li p {
-  margin: 0 24px 12px 0;
 }
 
 .allprice {
   font-weight: 600;
-  padding-left: 24px;
+  text-align: right;
 }
 @media (max-width: 414px) {
   .allprice {
@@ -1560,6 +1571,7 @@ input[type=radio]:checked::after { /*點選後樣式*/
 .payment {
   display: flex;
   justify-content: space-between;
+  gap: 4px;
   margin-top: 64px;
 }
 @media (max-width: 768px) {
