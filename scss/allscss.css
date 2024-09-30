@@ -671,6 +671,11 @@ input[type=radio]:checked::after { /*點選後樣式*/
   background-position: 0 80%; /*2*/
   transform: scaleX(-1);
 }
+@media (max-width: 569px) {
+  .preserved-flower-img {
+    background-position: 50% 80%;
+  }
+}
 @media (max-width: 414px) {
   .preserved-flower-img {
     height: 145px;

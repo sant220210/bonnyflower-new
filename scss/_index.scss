@@ -326,6 +326,10 @@
 .preserved-flower-img{
     @include bgimg(264px,0 80%,'../image/花藝-永生花禮.png');
     transform:scaleX(-1);
+
+    @include phone569(){
+        background-position:50% 80%;
+        }
    
     @include phone414(){
         height: 145px;
