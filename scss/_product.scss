@@ -49,16 +49,15 @@
 
 /*下拉選單*/
 .section{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;/*Safari 兼容*/
     margin-top: 64px;
 }
+
 .sort{
     display: flex;
     justify-content: flex-end;
     gap:20px;
 }
+
 .sortlist,.quantity{
     width: 204px;
     padding: 12px;

@@ -299,7 +299,6 @@
 
     input{
         background: $secondarycolor;
-        padding:12px 16px ;
         border:0px;
         margin: 4px 0 16px 0;
     }
@@ -331,9 +330,13 @@
         padding:16px ;
     }
 }
+
 .card-info{
+
     input{
     width: 100%;
+    padding:12px 16px ;
+    
     }
 }
 
@@ -436,7 +439,7 @@
 
 
 
-.idnumber{
+.id-number{
     width: 100%;
     background: rgba($color: $maincolor, $alpha: 20%);
     padding:12px 16px ;
