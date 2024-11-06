@@ -49,6 +49,9 @@
 
 /*下拉選單*/
 .section{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;/*Safari 兼容*/
     margin-top: 64px;
 }
 .sort{
@@ -111,7 +114,7 @@
 
               
 
-                    @include phone414(){
+                    @include phone569(){
                         object-position:0 50%;
                         height: 120px;
                     }

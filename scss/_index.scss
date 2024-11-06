@@ -190,6 +190,12 @@
         font-weight: 700;
         margin-bottom: 24px;
 
+        @include phone569(){
+            line-height: 140%;
+           
+        }
+
+
         @include phone414(){
             text-align: center;
            

@@ -547,6 +547,11 @@ input[type=radio]:checked::after { /*點選後樣式*/
   font-weight: 700;
   margin-bottom: 24px;
 }
+@media (max-width: 569px) {
+  .about-text h2, .service-text h2 {
+    line-height: 140%;
+  }
+}
 @media (max-width: 414px) {
   .about-text h2, .service-text h2 {
     text-align: center;
@@ -733,6 +738,9 @@ input[type=radio]:checked::after { /*點選後樣式*/
 
 /*下拉選單*/
 .section {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /*Safari 兼容*/
   margin-top: 64px;
 }
 
@@ -793,7 +801,7 @@ input[type=radio]:checked::after { /*點選後樣式*/
   -o-object-position: 0 35%;
      object-position: 0 35%;
 }
-@media (max-width: 414px) {
+@media (max-width: 569px) {
   .product-item li img {
     -o-object-position: 0 50%;
        object-position: 0 50%;
@@ -1624,7 +1632,7 @@ input[type=radio]:checked::after { /*點選後樣式*/
 .choose-pay input {
   margin-right: 24px;
 }
-.choose-pay div {
+.choose-pay li {
   padding: 16px;
 }
 
